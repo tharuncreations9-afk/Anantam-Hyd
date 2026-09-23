@@ -1,0 +1,11 @@
+const fs = require("fs");
+const path = require("path");
+let t = fs.readFileSync(path.join(__dirname, "../data/fotoowl-images-raw.json"), "utf8");
+if (t.charCodeAt(0) === 0xfeff) t = t.slice(1);
+const imgs = JSON.parse(t);
+const out = [];
+for (let i = 40; i <= 60; i++) out.push(`${i} ${imgs[i].name} ${imgs[i].width}x${imgs[i].height}`);
+out.push("---");
+for (let i = 290; i <= 315; i++) out.push(`${i} ${imgs[i].name} ${imgs[i].width}x${imgs[i].height}`);
+fs.writeFileSync(path.join(__dirname, "../data/fotoowl-preview/index-list.txt"), out.join("\n"));
+console.log("wrote", out.length);

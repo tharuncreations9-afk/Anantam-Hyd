@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #f7f4ee;
+  --color-cream: #f0ebe3;
+  --color-off-white: #faf8f4;
+  --color-forest: #24372d;
+  --color-forest-deep: #17231d;
+  --color-charcoal: #252525;
+  --color-muted: #77736b;
+  --color-gold: #c59d5f;
+  --color-gold-soft: #d4b57a;
+  --color-gold-deep: #9a7844;
+
+  --font-serif: var(--font-cormorant), "Times New Roman", serif;
+  --font-sans: var(--font-dm-sans), "Helvetica Neue", Arial, sans-serif;
+
+  --animate-fade-in: fade-in 0.8s ease-out both;
+  --animate-fade-up: fade-up 0.9s ease-out both;
+  --animate-reveal: reveal 1s ease-out both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    clip-path: inset(8% 8% 8% 8%);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes scroll-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(6px);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-forest) 18%, transparent);
+    color: var(--color-forest-deep);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif font-light tracking-wide text-gold;
+  }
+
+  a {
+    @apply transition-colors duration-500;
+  }
+
+  img {
+    @apply select-none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .label-caps {
+    @apply font-sans text-[0.68rem] uppercase tracking-[0.28em] text-muted;
+  }
+
+  .editorial-heading {
+    @apply font-serif font-light leading-[1.05] tracking-[0.04em] text-gold;
+  }
+
+  .link-underline {
+    @apply relative inline-flex items-center gap-2;
+  }
+
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.55s ease;
+  }
+
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  .scroll-indicator {
+    animation: scroll-pulse 2.2s ease-in-out infinite;
+  }
+
+  .section-pad {
+    @apply px-5 sm:px-8 lg:px-12 xl:px-16;
+  }
+
+  .container-luxury {
+    @apply mx-auto w-full max-w-[1400px];
+  }
+
+  .gallery-scroll {
+    animation: gallery-marquee 55s linear infinite;
+  }
+
+  .gallery-scroll-wrapper:hover .gallery-scroll {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes gallery-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
