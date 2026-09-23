@@ -65,9 +65,10 @@ export async function POST(request) {
     return NextResponse.json({ ok: true, id: enquiry.id }, { status: 201 });
   } catch (error) {
     console.error("save enquiry", error);
-    return NextResponse.json(
-      { error: "Could not save enquiry." },
-      { status: 500 },
-    );
+    const message =
+      process.env.VERCEL && !process.env.BLOB_READ_WRITE_TOKEN
+        ? "Storage is not configured. Add a Vercel Blob store to this project."
+        : "Could not save enquiry.";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

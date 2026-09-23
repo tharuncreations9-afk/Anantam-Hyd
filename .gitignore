@@ -46,7 +46,7 @@ next-env.d.ts
 /data/fotoowl-collections.json
 /data/fotoowl-preview/
 
-# enquiry form data (keep on server across deploys)
+# enquiry form data — local fallback only (Vercel uses Blob)
 /storage/enquiries.json
 /storage/enquiries.json.tmp
 /storage/*.tmp
