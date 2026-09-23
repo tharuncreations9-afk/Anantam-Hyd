@@ -53,23 +53,39 @@ export default function EnquiriesViewer() {
   const [error, setError] = useState("");
   const [editError, setEditError] = useState("");
 
-  const loadList = useCallback(async () => {
-    setLoading(true);
+  const loadList = useCallback(async ({ silent = false } = {}) => {
+    if (!silent) setLoading(true);
     setError("");
     try {
-      const response = await fetch("/api/enquiries", { cache: "no-store" });
+      const response = await fetch(`/api/enquiries?t=${Date.now()}`, {
+        cache: "no-store",
+      });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Failed to load.");
       setList(data.enquiries || []);
     } catch (err) {
       setError(err.message || "Failed to load enquiries.");
     } finally {
-      setLoading(false);
+      if (!silent) setLoading(false);
     }
   }, []);
 
+  // Auto-load on open; refresh when tab/page becomes visible again
   useEffect(() => {
     loadList();
+
+    const refresh = () => {
+      if (document.visibilityState === "visible") {
+        loadList({ silent: true });
+      }
+    };
+
+    window.addEventListener("focus", refresh);
+    document.addEventListener("visibilitychange", refresh);
+    return () => {
+      window.removeEventListener("focus", refresh);
+      document.removeEventListener("visibilitychange", refresh);
+    };
   }, [loadList]);
 
   const modalOpen = Boolean(detail || editItem || deleteTarget);
@@ -103,6 +119,7 @@ export default function EnquiriesViewer() {
     setError("");
     try {
       setDetail(await fetchEnquiry(id));
+      loadList({ silent: true });
     } catch (err) {
       setError(err.message || "Failed to load detail.");
     } finally {
@@ -153,7 +170,7 @@ export default function EnquiriesViewer() {
       if (!response.ok) throw new Error(data.error || "Could not save.");
       setEditItem(null);
       if (detail?.id === data.enquiry.id) setDetail(data.enquiry);
-      await loadList();
+      await loadList({ silent: true });
     } catch (err) {
       setEditError(err.message || "Could not save.");
     } finally {
@@ -174,7 +191,7 @@ export default function EnquiriesViewer() {
       if (detail?.id === deleteTarget.id) setDetail(null);
       if (editItem?.id === deleteTarget.id) setEditItem(null);
       setDeleteTarget(null);
-      await loadList();
+      await loadList({ silent: true });
     } catch (err) {
       setError(err.message || "Could not delete.");
       setDeleteTarget(null);
@@ -188,19 +205,12 @@ export default function EnquiriesViewer() {
 
   return (
     <div>
-      <div className="mb-5 flex items-end justify-between gap-4">
+      <div className="mb-5">
         <p className="text-sm text-muted">
           {loading
             ? "Loading…"
             : `${list.length} enquiry${list.length === 1 ? "" : "ies"}`}
         </p>
-        <button
-          type="button"
-          onClick={loadList}
-          className="label-caps text-muted transition-colors hover:text-forest-deep"
-        >
-          Refresh
-        </button>
       </div>
 
       {error ? (

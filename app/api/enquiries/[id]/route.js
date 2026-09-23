@@ -16,7 +16,14 @@ export async function GET(_request, { params }) {
     if (!enquiry) {
       return NextResponse.json({ error: "Not found." }, { status: 404 });
     }
-    return NextResponse.json({ enquiry });
+    return NextResponse.json(
+      { enquiry },
+      {
+        headers: {
+          "Cache-Control": "no-store, no-cache, must-revalidate",
+        },
+      },
+    );
   } catch (error) {
     console.error("get enquiry", error);
     return NextResponse.json(

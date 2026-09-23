@@ -8,16 +8,23 @@ export const dynamic = "force-dynamic";
 export async function GET() {
   try {
     const enquiries = await listEnquiries();
-    return NextResponse.json({
-      enquiries: enquiries.map((item) => ({
-        id: item.id,
-        createdAt: item.createdAt,
-        name: item.name,
-        phone: item.phone,
-        email: item.email,
-        eventType: item.eventType,
-      })),
-    });
+    return NextResponse.json(
+      {
+        enquiries: enquiries.map((item) => ({
+          id: item.id,
+          createdAt: item.createdAt,
+          name: item.name,
+          phone: item.phone,
+          email: item.email,
+          eventType: item.eventType,
+        })),
+      },
+      {
+        headers: {
+          "Cache-Control": "no-store, no-cache, must-revalidate",
+        },
+      },
+    );
   } catch (error) {
     console.error("list enquiries", error);
     return NextResponse.json(
