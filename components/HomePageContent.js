@@ -155,11 +155,10 @@ export default function HomePageContent() {
       {/* HOUSE — 3rd content section */}
       <section className="section-pad bg-ivory py-24 lg:py-32">
         <div className="container-luxury">
-          <FadeIn className="mx-auto mb-14 max-w-2xl text-center">
+          <FadeIn className="mx-auto mb-14 max-w-4xl text-center">
             <SectionLabel className="text-center">Our House</SectionLabel>
-            <h2 className="editorial-heading text-4xl sm:text-5xl">
-              Luxury spaces.
-              <span className="block">Lawns. Stays.</span>
+            <h2 className="editorial-heading whitespace-nowrap text-[clamp(1.35rem,4.2vw,3.25rem)]">
+              Luxury spaces. Lawns. Stays.
             </h2>
             <p className="mt-5 text-sm leading-relaxed text-muted sm:text-base">
               One Place. Many ways to belong here.
