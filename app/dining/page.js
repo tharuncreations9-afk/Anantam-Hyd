@@ -45,7 +45,7 @@ const sections = [
     label: "Celebrations",
     title: ["Evenings made", "to linger."],
     text: "From outdoor dining moments to celebration hosting, hospitality at Anantam centres on people, light and the feeling of being well looked after.",
-    image: images.weddingLawn,
+    image: images.celebrations,
   },
 ];
 
