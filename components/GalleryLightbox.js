@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState, useRef } from "react";
 import { createPortal } from "react-dom";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -9,9 +9,29 @@ function blockImageTheft(event) {
   event.preventDefault();
 }
 
+function preloadUrl(url) {
+  if (!url || typeof window === "undefined") return;
+  const img = new window.Image();
+  img.decoding = "async";
+  img.src = url;
+}
+
+function neighborIndexes(index, total) {
+  if (total < 2 || index == null) return [];
+  const offsets = [-2, -1, 1, 2];
+  return offsets
+    .map((offset) => (index + offset + total * 10) % total)
+    .filter((value, i, arr) => arr.indexOf(value) === i && value !== index);
+}
+
 export default function GalleryLightbox({ items, index, onClose, onNavigate }) {
   const item = index != null ? items[index] : null;
   const total = items.length;
+
+  const [visible, setVisible] = useState(item);
+  const [ready, setReady] = useState(false);
+  const [fading, setFading] = useState(false);
+  const loadToken = useRef(0);
 
   const goPrev = useCallback(() => {
     if (total < 2) return;
@@ -22,6 +42,60 @@ export default function GalleryLightbox({ items, index, onClose, onNavigate }) {
     if (total < 2) return;
     onNavigate((index + 1) % total);
   }, [index, total, onNavigate]);
+
+  // Prefetch neighbors so next/prev feel instant
+  useEffect(() => {
+    if (index == null || !items.length) return;
+
+    neighborIndexes(index, items.length).forEach((i) => {
+      const neighbor = items[i];
+      if (!neighbor) return;
+      preloadUrl(neighbor.thumb || neighbor.image);
+      preloadUrl(neighbor.image || neighbor.thumb);
+    });
+  }, [index, items]);
+
+  // Smooth swap: keep current frame, load next, then crossfade
+  useEffect(() => {
+    if (!item) {
+      setVisible(null);
+      return;
+    }
+
+    const token = ++loadToken.current;
+    const high = item.image || item.thumb;
+    const low = item.thumb || item.image;
+
+    // Instant placeholder from thumb (usually already cached from grid)
+    setFading(true);
+    setReady(false);
+    setVisible(item);
+
+    const finish = () => {
+      if (loadToken.current !== token) return;
+      setReady(true);
+      requestAnimationFrame(() => {
+        if (loadToken.current === token) setFading(false);
+      });
+    };
+
+    if (!high) {
+      finish();
+      return;
+    }
+
+    const img = new window.Image();
+    img.decoding = "async";
+    img.onload = finish;
+    img.onerror = finish;
+    img.src = high;
+
+    // Also warm the thumb path if different
+    if (low && low !== high) preloadUrl(low);
+
+    // If already cached, onload may fire sync — fading cleared in finish
+    if (img.complete) finish();
+  }, [item]);
 
   useEffect(() => {
     if (item == null) return;
@@ -42,17 +116,22 @@ export default function GalleryLightbox({ items, index, onClose, onNavigate }) {
     };
   }, [item, onClose, goPrev, goNext]);
 
-  if (item == null || typeof document === "undefined") return null;
+  if (item == null || visible == null || typeof document === "undefined") {
+    return null;
+  }
+
+  const showSrc = ready
+    ? visible.image || visible.thumb
+    : visible.thumb || visible.image;
 
   return createPortal(
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center bg-forest-deep/92 backdrop-blur-sm"
       role="dialog"
       aria-modal="true"
-      aria-label={`${item.title} — gallery viewer`}
+      aria-label={`${visible.title} — gallery viewer`}
       onContextMenu={blockImageTheft}
     >
-      {/* Dim backdrop — click closes */}
       <button
         type="button"
         className="absolute inset-0 cursor-default"
@@ -60,7 +139,6 @@ export default function GalleryLightbox({ items, index, onClose, onNavigate }) {
         onClick={onClose}
       />
 
-      {/* Close */}
       <button
         type="button"
         onClick={onClose}
@@ -70,7 +148,6 @@ export default function GalleryLightbox({ items, index, onClose, onNavigate }) {
         <X className="h-6 w-6" strokeWidth={1.5} />
       </button>
 
-      {/* Prev / next side hit areas */}
       {total > 1 ? (
         <>
           <button
@@ -98,34 +175,42 @@ export default function GalleryLightbox({ items, index, onClose, onNavigate }) {
         </>
       ) : null}
 
-      {/* Image stage — pointer-events-none on img so right-click can't target CDN URL */}
       <div
         className="relative z-[5] mx-auto flex max-h-[min(92vh,900px)] w-[min(92vw,1100px)] flex-col items-center px-14 sm:px-20"
         onClick={(event) => event.stopPropagation()}
         onContextMenu={blockImageTheft}
       >
-        <div className="relative flex max-h-[min(82vh,820px)] w-full items-center justify-center">
+        <div className="relative flex min-h-[40vh] max-h-[min(82vh,820px)] w-full items-center justify-center">
           <Image
-            key={item.id}
-            src={item.image || item.thumb}
-            alt={item.title}
-            width={item.width}
-            height={item.height}
+            key={`${visible.id}-${ready ? "hi" : "lo"}`}
+            src={showSrc}
+            alt={visible.title}
+            width={visible.width}
+            height={visible.height}
             sizes="(max-width: 1100px) 92vw, 1100px"
             priority
             draggable={false}
             onContextMenu={blockImageTheft}
             onDragStart={blockImageTheft}
-            className="pointer-events-none max-h-[min(82vh,820px)] w-auto max-w-full select-none object-contain"
+            className={`pointer-events-none max-h-[min(82vh,820px)] w-auto max-w-full select-none object-contain transition-opacity duration-300 ease-out ${
+              fading ? "opacity-40" : "opacity-100"
+            }`}
             style={{ WebkitUserDrag: "none", userSelect: "none" }}
           />
-          {/* Transparent shield — blocks open-in-new-tab / save-as on the image */}
           <div
             className="absolute inset-0 z-[1]"
             aria-hidden="true"
             onContextMenu={blockImageTheft}
             onDragStart={blockImageTheft}
           />
+          {!ready ? (
+            <div
+              className="pointer-events-none absolute bottom-3 left-1/2 z-[2] h-1 w-16 -translate-x-1/2 overflow-hidden rounded-full bg-ivory/15"
+              aria-hidden="true"
+            >
+              <div className="h-full w-1/2 animate-pulse bg-ivory/50" />
+            </div>
+          ) : null}
         </div>
 
         {total > 1 ? (
