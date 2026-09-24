@@ -31,7 +31,7 @@ export default function ContactPage() {
       <PageHero
         image={images.contact}
         label="Contact"
-        titleLines={["Let's plan", "your Anantam."]}
+        titleLines={["Let's plan your stay", "at Anantam."]}
         subtitle="Share a few details about your stay or celebration. Our team will follow up to help shape the experience."
         compact
       />
