@@ -63,10 +63,9 @@ export default function HomeHeroSlider() {
 
   return (
     <section
-      className="relative flex aspect-[3/2] touch-pan-y items-end overflow-hidden bg-forest-deep select-none sm:aspect-auto sm:min-h-[100svh]"
+      className="relative bg-forest-deep sm:flex sm:min-h-[100svh] sm:items-end sm:overflow-hidden"
       aria-roledescription="carousel"
       aria-label="Anantam resort highlights"
-      style={{ touchAction: "pan-y" }}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => {
         setPaused(false);
@@ -78,41 +77,72 @@ export default function HomeHeroSlider() {
           setPaused(false);
         }
       }}
-      onTouchStart={swipe.onTouchStart}
-      onTouchEnd={swipe.onTouchEnd}
-      onTouchCancel={swipe.onTouchCancel}
-      onMouseDown={swipe.onMouseDown}
-      onMouseUp={swipe.onMouseUp}
     >
-      {slides.map((slide, i) => (
-        <div
-          key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-out ${
-            i === index ? "opacity-100" : "opacity-0"
-          }`}
-          aria-hidden={i !== index}
-        >
-          <Image
-            src={slide.src}
-            alt={slide.alt}
-            fill
-            priority={i === 0}
-            quality={90}
-            sizes="100vw"
-            draggable={false}
-            className="pointer-events-none object-contain object-center sm:object-cover sm:object-center"
-          />
+      {/* Image — full landscape on mobile, no text on top of it */}
+      <div
+        className="relative aspect-[3/2] w-full touch-pan-y select-none sm:absolute sm:inset-0 sm:aspect-auto"
+        style={{ touchAction: "pan-y" }}
+        onTouchStart={swipe.onTouchStart}
+        onTouchEnd={swipe.onTouchEnd}
+        onTouchCancel={swipe.onTouchCancel}
+        onMouseDown={swipe.onMouseDown}
+        onMouseUp={swipe.onMouseUp}
+      >
+        {slides.map((slide, i) => (
+          <div
+            key={slide.id}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-out ${
+              i === index ? "opacity-100" : "opacity-0"
+            }`}
+            aria-hidden={i !== index}
+          >
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              priority={i === 0}
+              quality={90}
+              sizes="100vw"
+              draggable={false}
+              className="pointer-events-none object-contain object-center sm:object-cover"
+            />
+          </div>
+        ))}
+
+        <div className="pointer-events-none absolute inset-0 hidden bg-gradient-to-t from-forest-deep/60 via-forest-deep/20 to-forest-deep/30 sm:block" />
+
+        <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2.5 sm:bottom-8">
+          <div
+            className="flex items-center gap-2.5"
+            role="tablist"
+            aria-label="Hero slides"
+          >
+            {slides.map((slide, i) => (
+              <button
+                key={slide.id}
+                type="button"
+                role="tab"
+                aria-selected={i === index}
+                aria-label={`Show slide ${i + 1}: ${slide.eyebrow}`}
+                onClick={() => goTo(i)}
+                className={`h-1.5 rounded-full transition-all duration-500 ${
+                  i === index
+                    ? "w-8 bg-gold"
+                    : "w-1.5 bg-ivory/50 hover:bg-ivory/80 sm:bg-ivory/40"
+                }`}
+              />
+            ))}
+          </div>
         </div>
-      ))}
+      </div>
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest-deep/70 via-forest-deep/20 to-forest-deep/15 sm:from-forest-deep/60 sm:via-forest-deep/20 sm:to-forest-deep/30" />
-
-      <div className="pointer-events-none relative z-10 container-luxury section-pad w-full pb-16 pt-20 sm:pb-32 sm:pt-32 lg:pb-36">
+      {/* Copy — below image on mobile (clears logo), overlay on desktop */}
+      <div className="relative z-10 container-luxury section-pad w-full py-8 sm:absolute sm:inset-x-0 sm:bottom-0 sm:pb-28 sm:pt-32 lg:pb-32">
         <div key={active.id} className="max-w-4xl">
-          <p className="label-caps animate-[fade-up_0.7s_ease_both] text-[0.58rem] text-ivory/70 sm:text-[0.68rem]">
+          <p className="label-caps animate-[fade-up_0.7s_ease_both] text-ivory/70">
             {active.eyebrow}
           </p>
-          <h1 className="editorial-heading mt-3 animate-[fade-up_0.8s_ease_0.08s_both] text-[1.85rem] leading-[1.1] text-gold sm:mt-5 sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="editorial-heading mt-3 animate-[fade-up_0.8s_ease_0.08s_both] text-[2rem] leading-[1.1] text-gold sm:mt-5 sm:text-5xl md:text-6xl lg:text-7xl">
             {active.lines.map((line) => (
               <span key={line} className="block">
                 {line}
@@ -120,36 +150,13 @@ export default function HomeHeroSlider() {
             ))}
           </h1>
           {active.support ? (
-            <p className="mt-3 max-w-lg animate-[fade-up_0.8s_ease_0.16s_both] text-xs leading-relaxed text-ivory/75 sm:mt-6 sm:text-base lg:text-lg">
+            <p className="mt-3 max-w-lg animate-[fade-up_0.8s_ease_0.16s_both] text-sm leading-relaxed text-ivory/75 sm:mt-6 sm:text-base lg:text-lg">
               {active.support}
             </p>
           ) : null}
         </div>
-      </div>
 
-      <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-3 sm:bottom-8 sm:gap-5">
-        <div
-          className="flex items-center gap-2.5"
-          role="tablist"
-          aria-label="Hero slides"
-        >
-          {slides.map((slide, i) => (
-            <button
-              key={slide.id}
-              type="button"
-              role="tab"
-              aria-selected={i === index}
-              aria-label={`Show slide ${i + 1}: ${slide.eyebrow}`}
-              onClick={() => goTo(i)}
-              className={`h-1.5 rounded-full transition-all duration-500 ${
-                i === index
-                  ? "w-8 bg-gold"
-                  : "w-1.5 bg-ivory/40 hover:bg-ivory/70"
-              }`}
-            />
-          ))}
-        </div>
-        <div className="scroll-indicator pointer-events-none flex flex-col items-center gap-2 text-ivory/70">
+        <div className="mt-8 hidden flex-col items-center gap-2 text-ivory/70 sm:mt-10 sm:flex">
           <span className="label-caps text-[0.58rem]">Scroll</span>
           <span className="h-8 w-px bg-ivory/50" aria-hidden="true" />
         </div>
