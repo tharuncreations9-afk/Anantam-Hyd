@@ -28,7 +28,7 @@ const signature = [
     description:
       "Lawns and open skies for weddings and moments worth gathering for.",
     image: images.celebrate,
-    href: "/contact",
+    href: "/banquet-lawns",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function HomePageContent() {
           <FadeIn>
             <ResortImage
               src={images.intro}
-              alt="Anantam resort interiors and hospitality"
+              alt="Anantam reception lobby"
               width={1600}
               height={1067}
               sizes="(max-width: 1024px) 100vw, 50vw"

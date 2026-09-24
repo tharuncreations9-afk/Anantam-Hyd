@@ -31,6 +31,7 @@ export const site = {
     { label: "Home", href: "/" },
     { label: "Accommodation", href: "/accommodation" },
     { label: "Dining", href: "/dining" },
+    { label: "Banquet & Lawns", href: "/banquet-lawns" },
     { label: "Gallery", href: "/gallery" },
     { label: "Contact", href: "/contact" },
   ],
@@ -57,7 +58,7 @@ export const site = {
       title: "Celebrate",
       description:
         "Lawns, open skies and intimate settings for weddings and meaningful celebrations.",
-      href: "/contact",
+      href: "/banquet-lawns",
       imageKey: "celebrate",
     },
     {
@@ -73,6 +74,7 @@ export const site = {
     "Infinity Pool",
     "Gaming Room",
     "Landscaped Lawns",
+    "Bonfire",
     "Koi Pond",
     "Waterfall",
     "Children's Play Area",
@@ -95,6 +97,7 @@ export const site = {
         "Secluded cottage stays for guests who prefer privacy, open air and a more intimate resort rhythm.",
       amenities: ["Private setting", "Spacious layout", "Resort access", "Quiet surroundings"],
       imageKey: "cottage",
+      slidesKey: "cottageSlides",
     },
     {
       slug: "swimming-pool",
@@ -103,6 +106,16 @@ export const site = {
         "A calm resort pool for unhurried afternoons — still water, easy lounging and soft open-air light.",
       amenities: ["Pool deck", "Lounge seating", "Open-air setting", "Resort access"],
       imageKey: "pool",
+      slidesKey: "poolSlides",
+    },
+    {
+      slug: "bonfire",
+      name: "Bonfire",
+      description:
+        "Evenings around the fire — warm light, open air and conversation under the night sky.",
+      amenities: ["Stone fire pit", "Circle seating", "Night ambience", "Garden setting"],
+      imageKey: "bonfire",
+      slidesKey: "bonfireSlides",
     },
     {
       slug: "gaming-room",

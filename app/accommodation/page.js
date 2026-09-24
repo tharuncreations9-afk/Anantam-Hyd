@@ -4,20 +4,21 @@ import SectionLabel from "@/components/SectionLabel";
 import PrimaryButton from "@/components/PrimaryButton";
 import FadeIn from "@/components/FadeIn";
 import FinalCTA from "@/components/FinalCTA";
+import MediaSlider from "@/components/MediaSlider";
 import { images } from "@/data/images";
 import { site, canonicalBase } from "@/data/site";
 
 export const metadata = {
   title: "Accommodation",
   description:
-    "Rooms, private cottages, swimming pool and gaming room at Anantam Resort in Shamshabad, Hyderabad.",
+    "Rooms, private cottages, swimming pool, bonfire and gaming room at Anantam Resort in Shamshabad, Hyderabad.",
   alternates: {
     canonical: `${canonicalBase}/accommodation`,
   },
   openGraph: {
     title: "Accommodation | Anantam",
     description:
-      "Rooms, private cottages, swimming pool and gaming room at Anantam Resort in Shamshabad, Hyderabad.",
+      "Rooms, private cottages, swimming pool, bonfire and gaming room at Anantam Resort in Shamshabad, Hyderabad.",
     url: `${canonicalBase}/accommodation`,
   },
 };
@@ -29,7 +30,7 @@ export default function AccommodationPage() {
         image={images.accommodation}
         label="Accommodation"
         titleLines={["A place to", "call your own."]}
-        subtitle="Rooms and private cottages, with a resort pool and gaming room for unhurried afternoons and evenings."
+        subtitle="Rooms and private cottages, with a resort pool, bonfire evenings and a gaming room for unhurried days."
       />
 
       <section className="section-pad bg-ivory py-20 lg:py-28">
@@ -38,7 +39,7 @@ export default function AccommodationPage() {
             <SectionLabel>Stay</SectionLabel>
             <p className="font-serif text-2xl font-light leading-relaxed tracking-wide text-gold sm:text-3xl">
               Anantam offers stays shaped around rest — soft light, quiet
-              interiors, a calm swimming pool and a gaming room for easy evenings.
+              interiors, a calm swimming pool and evenings by the fire.
             </p>
           </FadeIn>
         </div>
@@ -48,23 +49,39 @@ export default function AccommodationPage() {
         <div className="container-luxury space-y-20 lg:space-y-28">
           {site.accommodationCategories.map((category, index) => {
             const reverse = index % 2 === 1;
+            const slides = category.slidesKey
+              ? images[category.slidesKey]
+              : null;
+            const single = images[category.imageKey];
+
             return (
               <div
                 key={category.slug}
+                id={category.slug}
                 className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
                   reverse ? "lg:[&>*:first-child]:order-2" : ""
                 }`}
               >
                 <FadeIn>
-                  {/* Homepage-style landscape rectangle — no tall crops */}
                   <div className="relative aspect-[3/2] overflow-hidden bg-ivory">
-                    <Image
-                      src={images[category.imageKey]}
-                      alt={category.name}
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-contain"
-                    />
+                    {slides?.length ? (
+                      <MediaSlider
+                        slides={slides}
+                        alt={category.name}
+                        interval={5000}
+                        fit="cover"
+                        className="absolute inset-0 h-full w-full"
+                      />
+                    ) : (
+                      <Image
+                        src={single}
+                        alt={category.name}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        quality={90}
+                        className="object-cover object-center"
+                      />
+                    )}
                   </div>
                 </FadeIn>
 
@@ -89,7 +106,9 @@ export default function AccommodationPage() {
                     ))}
                   </ul>
                   <div className="mt-10">
-                    <PrimaryButton href="/contact#enquiry">Enquire to Stay</PrimaryButton>
+                    <PrimaryButton href="/contact#enquiry">
+                      Enquire to Stay
+                    </PrimaryButton>
                   </div>
                 </FadeIn>
               </div>

@@ -67,7 +67,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
-      <body className="font-sans">
+      <body className="font-sans" suppressHydrationWarning>
         <Navbar />
         <main id="main-content">{children}</main>
         <Footer />

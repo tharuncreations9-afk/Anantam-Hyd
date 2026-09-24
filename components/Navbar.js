@@ -35,6 +35,7 @@ export default function Navbar() {
     pathname === "/" ||
     pathname === "/accommodation" ||
     pathname === "/dining" ||
+    pathname === "/banquet-lawns" ||
     pathname === "/gallery" ||
     pathname === "/contact";
 
