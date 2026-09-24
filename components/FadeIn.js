@@ -22,7 +22,8 @@ export default function FadeIn({
           observer.disconnect();
         }
       },
-      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+      // threshold 0 — tall sections (e.g. galleries) must still reveal on mobile
+      { threshold: 0, rootMargin: "0px 0px -8% 0px" }
     );
 
     observer.observe(node);

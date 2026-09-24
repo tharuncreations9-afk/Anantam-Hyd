@@ -1,6 +1,5 @@
 import PageHero from "@/components/PageHero";
 import GalleryGrid from "@/components/GalleryGrid";
-import FadeIn from "@/components/FadeIn";
 import { images } from "@/data/images";
 import { canonicalBase } from "@/data/site";
 
@@ -32,9 +31,7 @@ export default function GalleryPage() {
 
       <section className="section-pad bg-ivory py-16 lg:py-24">
         <div className="container-luxury">
-          <FadeIn>
-            <GalleryGrid />
-          </FadeIn>
+          <GalleryGrid />
         </div>
       </section>
     </>

@@ -46,9 +46,14 @@ export default function GalleryGrid() {
               <Image
                 src={item.thumb || item.image}
                 alt={item.title}
-                width={item.width}
-                height={item.height}
+                width={Math.min(item.width || 1600, 1600)}
+                height={Math.round(
+                  (Math.min(item.width || 1600, 1600) * (item.height || 1067)) /
+                    (item.width || 1600),
+                )}
                 sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                loading="lazy"
+                quality={80}
                 draggable={false}
                 onContextMenu={blockImageTheft}
                 onDragStart={blockImageTheft}
