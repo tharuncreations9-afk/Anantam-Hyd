@@ -59,6 +59,7 @@ export default function EnquiriesViewer() {
     try {
       const response = await fetch(`/api/enquiries?t=${Date.now()}`, {
         cache: "no-store",
+        credentials: "include",
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Failed to load.");
@@ -108,7 +109,10 @@ export default function EnquiriesViewer() {
   }, [modalOpen, deleteTarget, editItem]);
 
   const fetchEnquiry = async (id) => {
-    const response = await fetch(`/api/enquiries/${id}`, { cache: "no-store" });
+    const response = await fetch(`/api/enquiries/${id}`, {
+      cache: "no-store",
+      credentials: "include",
+    });
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || "Failed to load detail.");
     return data.enquiry;
@@ -164,6 +168,7 @@ export default function EnquiriesViewer() {
       const response = await fetch(`/api/enquiries/${editItem.id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
+        credentials: "include",
         body: JSON.stringify(editValues),
       });
       const data = await response.json();
@@ -185,6 +190,7 @@ export default function EnquiriesViewer() {
     try {
       const response = await fetch(`/api/enquiries/${deleteTarget.id}`, {
         method: "DELETE",
+        credentials: "include",
       });
       const data = await response.json().catch(() => ({}));
       if (!response.ok) throw new Error(data.error || "Could not delete.");

@@ -5,11 +5,19 @@ import {
   getEnquiryById,
   updateEnquiry,
 } from "@/lib/enquiries-store";
+import {
+  isEnquiriesAuthenticated,
+  unauthorizedEnquiriesResponse,
+} from "@/lib/enquiries-auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export async function GET(_request, { params }) {
+export async function GET(request, { params }) {
+  if (!isEnquiriesAuthenticated(request)) {
+    return unauthorizedEnquiriesResponse();
+  }
+
   try {
     const { id } = await params;
     const enquiry = await getEnquiryById(id);
@@ -34,6 +42,10 @@ export async function GET(_request, { params }) {
 }
 
 export async function PATCH(request, { params }) {
+  if (!isEnquiriesAuthenticated(request)) {
+    return unauthorizedEnquiriesResponse();
+  }
+
   try {
     const { id } = await params;
     const body = await request.json();
@@ -83,7 +95,11 @@ export async function PATCH(request, { params }) {
   }
 }
 
-export async function DELETE(_request, { params }) {
+export async function DELETE(request, { params }) {
+  if (!isEnquiriesAuthenticated(request)) {
+    return unauthorizedEnquiriesResponse();
+  }
+
   try {
     const { id } = await params;
     const removed = await deleteEnquiry(id);

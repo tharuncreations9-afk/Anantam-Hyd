@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import BrandLogo from "./BrandLogo";
 import { site } from "@/data/site";
 
@@ -38,9 +37,7 @@ function WhatsAppIcon({ className = "" }) {
 }
 
 export default function Footer() {
-  const pathname = usePathname();
   const year = new Date().getFullYear();
-  const showViewDetails = pathname === "/contact";
 
   return (
     <footer className="bg-forest-deep text-ivory">
@@ -134,14 +131,6 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col gap-4 border-t border-ivory/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="label-caps text-ivory/35">© {year} Anantam</p>
-          {showViewDetails ? (
-            <Link
-              href="/view-details"
-              className="label-caps text-ivory/35 transition-colors hover:text-ivory/70"
-            >
-              View Details
-            </Link>
-          ) : null}
         </div>
       </div>
     </footer>

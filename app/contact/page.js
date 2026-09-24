@@ -3,6 +3,7 @@ import SectionLabel from "@/components/SectionLabel";
 import ContactForm from "@/components/ContactForm";
 import FadeIn from "@/components/FadeIn";
 import ContactHashScroll from "@/components/ContactHashScroll";
+import EnquiryEyeAccess from "@/components/EnquiryEyeAccess";
 import { images } from "@/data/images";
 import { site, canonicalBase } from "@/data/site";
 
@@ -115,10 +116,15 @@ export default function ContactPage() {
               id="enquiry"
               className="scroll-mt-32 bg-cream px-6 py-10 sm:px-10 lg:px-12"
             >
-              <SectionLabel>Enquiry Form</SectionLabel>
-              <h3 className="mb-10 font-serif text-3xl font-light tracking-wide text-gold">
-                Tell us about your plans
-              </h3>
+              <div className="mb-10 flex items-start justify-between gap-4">
+                <div>
+                  <SectionLabel>Enquiry Form</SectionLabel>
+                  <h3 className="mt-0 font-serif text-3xl font-light tracking-wide text-gold">
+                    Tell us about your plans
+                  </h3>
+                </div>
+                <EnquiryEyeAccess />
+              </div>
               <ContactForm />
             </div>
           </FadeIn>

@@ -1,11 +1,19 @@
 import { NextResponse } from "next/server";
 import { EVENT_TYPES } from "@/data/event-types";
 import { addEnquiry, listEnquiries } from "@/lib/enquiries-store";
+import {
+  isEnquiriesAuthenticated,
+  unauthorizedEnquiriesResponse,
+} from "@/lib/enquiries-auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+export async function GET(request) {
+  if (!isEnquiriesAuthenticated(request)) {
+    return unauthorizedEnquiriesResponse();
+  }
+
   try {
     const enquiries = await listEnquiries();
     return NextResponse.json(
