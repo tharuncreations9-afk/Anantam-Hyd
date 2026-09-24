@@ -4,6 +4,7 @@ import SectionLabel from "./SectionLabel";
 import PrimaryButton from "./PrimaryButton";
 import FadeIn from "./FadeIn";
 import ResortImage from "./ResortImage";
+import HomeHeroSlider from "./HomeHeroSlider";
 import { images } from "@/data/images";
 import { galleryItems } from "@/data/gallery";
 
@@ -47,35 +48,8 @@ const scrollGallery = [
 export default function HomePageContent() {
   return (
     <>
-      {/* HERO — full-bleed background */}
-      <section className="relative flex min-h-[100svh] items-end overflow-hidden">
-        <Image
-          src={images.hero}
-          alt="Anantam Resort, Shamshabad"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/55 via-forest-deep/15 to-forest-deep/25" />
-
-        <div className="relative z-10 container-luxury section-pad w-full pb-24 pt-32 sm:pb-28 lg:pb-32">
-          <p className="label-caps animate-[fade-up_0.9s_ease_both] text-ivory/70">
-            Shamshabad · Hyderabad
-          </p>
-          <h1 className="editorial-heading mt-5 max-w-4xl animate-[fade-up_0.9s_ease_0.12s_both] text-5xl text-gold sm:text-6xl lg:text-7xl">
-            <span className="block">A quiet escape,</span>
-            <span className="block">just beyond the city.</span>
-          </h1>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2">
-          <div className="scroll-indicator flex flex-col items-center gap-2 text-ivory/70">
-            <span className="label-caps text-[0.58rem]">Scroll</span>
-            <span className="h-8 w-px bg-ivory/50" aria-hidden="true" />
-          </div>
-        </div>
-      </section>
+      {/* HERO — full-bleed slider (home only) */}
+      <HomeHeroSlider />
 
       {/* PHILOSOPHY */}
       <section id="philosophy" className="section-pad bg-ivory py-24 lg:py-32">
