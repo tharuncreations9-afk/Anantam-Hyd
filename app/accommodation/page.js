@@ -89,13 +89,13 @@ export default function AccommodationPage() {
                   <p className="label-caps mb-4 text-gold">
                     {String(index + 1).padStart(2, "0")}
                   </p>
-                  <h2 className="editorial-heading text-4xl sm:text-5xl">
+                  <h2 className="editorial-heading">
                     {category.name}
                   </h2>
-                  <p className="mt-6 max-w-md text-base leading-relaxed text-muted">
+                  <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
                     {category.description}
                   </p>
-                  <ul className="mt-8 max-w-md space-y-3">
+                  <ul className="mt-8 max-w-xl space-y-3">
                     {category.amenities.map((amenity) => (
                       <li
                         key={amenity}

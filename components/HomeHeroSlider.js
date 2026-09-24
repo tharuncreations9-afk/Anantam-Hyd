@@ -142,12 +142,8 @@ export default function HomeHeroSlider() {
           <p className="label-caps animate-[fade-up_0.7s_ease_both] text-ivory/70">
             {active.eyebrow}
           </p>
-          <h1 className="editorial-heading mt-3 animate-[fade-up_0.8s_ease_0.08s_both] text-[2rem] leading-[1.1] text-gold sm:mt-5 sm:text-5xl md:text-6xl lg:text-7xl">
-            {active.lines.map((line) => (
-              <span key={line} className="block">
-                {line}
-              </span>
-            ))}
+          <h1 className="editorial-heading mt-3 animate-[fade-up_0.8s_ease_0.08s_both] text-balance sm:mt-5">
+            {active.lines.join(" ")}
           </h1>
           {active.support ? (
             <p className="mt-3 max-w-lg animate-[fade-up_0.8s_ease_0.16s_both] text-sm leading-relaxed text-ivory/75 sm:mt-6 sm:text-base lg:text-lg">

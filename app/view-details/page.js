@@ -18,7 +18,7 @@ export default function ViewDetailsPage() {
       <div className="container-luxury">
         <FadeIn>
           <SectionLabel>Admin</SectionLabel>
-          <h1 className="editorial-heading text-3xl sm:text-4xl lg:text-5xl">
+          <h1 className="editorial-heading">
             View Details
           </h1>
         </FadeIn>

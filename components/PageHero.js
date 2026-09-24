@@ -34,12 +34,8 @@ export default function PageHero({
             {label}
           </SectionLabel>
         ) : null}
-        <h1 className="editorial-heading max-w-4xl animate-[fade-up_0.9s_ease_0.1s_both] text-[2rem] leading-[1.1] text-gold sm:text-5xl md:text-6xl lg:text-7xl">
-          {titleLines.map((line) => (
-            <span key={line} className="block">
-              {line}
-            </span>
-          ))}
+        <h1 className="editorial-heading max-w-4xl animate-[fade-up_0.9s_ease_0.1s_both] text-balance">
+          {Array.isArray(titleLines) ? titleLines.join(" ") : titleLines}
         </h1>
         {subtitle ? (
           <p className="mt-3 max-w-xl animate-[fade-up_0.9s_ease_0.2s_both] text-sm leading-relaxed text-ivory/75 sm:mt-6 sm:text-base lg:text-lg">

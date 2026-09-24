@@ -36,7 +36,7 @@ function FeatureBlock({
   return (
     <section id={id} className={tone === "cream" ? "bg-cream" : "bg-ivory"}>
       <div
-        className={`container-luxury section-pad grid items-center gap-12 py-20 lg:grid-cols-2 lg:gap-16 lg:py-28 ${
+        className={`container-luxury section-pad grid items-center gap-10 py-20 lg:grid-cols-2 lg:gap-12 lg:py-28 ${
           reverse ? "lg:[&>*:first-child]:order-2" : ""
         }`}
       >
@@ -53,18 +53,14 @@ function FeatureBlock({
         </FadeIn>
         <FadeIn delay={80}>
           <SectionLabel>{label}</SectionLabel>
-          <h2 className="editorial-heading text-4xl sm:text-5xl">
-            {titleLines.map((line) => (
-              <span key={line} className="block">
-                {line}
-              </span>
-            ))}
+          <h2 className="editorial-heading text-balance">
+            {Array.isArray(titleLines) ? titleLines.join(" ") : titleLines}
           </h2>
-          <p className="mt-6 max-w-md text-base leading-relaxed text-muted sm:text-lg">
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
             {text}
           </p>
           {amenities?.length ? (
-            <ul className="mt-8 max-w-md space-y-3">
+            <ul className="mt-8 max-w-xl space-y-3">
               {amenities.map((item) => (
                 <li
                   key={item}
@@ -125,6 +121,23 @@ export default function BanquetLawnsPage() {
       />
 
       <FeatureBlock
+        id="banquet-hall-2"
+        label="Banquet Hall II"
+        titleLines={["Another hall,", "ready to host."]}
+        text="A second banquet hall for parallel celebrations, larger gatherings or a quieter alternative setting — same care, another room to shape the day."
+        amenities={[
+          "Second hall space",
+          "Flexible seating",
+          "Event lighting",
+          "Celebration ready",
+        ]}
+        slides={images.banquetHall2Slides}
+        alt="Anantam second banquet hall"
+        reverse
+        tone="ivory"
+      />
+
+      <FeatureBlock
         id="lobby"
         label="Lobby"
         titleLines={["Arrive.", "Settle in."]}
@@ -137,8 +150,7 @@ export default function BanquetLawnsPage() {
         ]}
         slides={images.lobbySlides}
         alt="Anantam banquet lobby and pre-function area"
-        reverse
-        tone="ivory"
+        tone="cream"
       />
 
       <FeatureBlock
@@ -154,7 +166,8 @@ export default function BanquetLawnsPage() {
         ]}
         slides={images.lawnSlides}
         alt="Anantam lawns — reception, banquet and infinity lawns"
-        tone="cream"
+        reverse
+        tone="ivory"
       />
 
       <FinalCTA />

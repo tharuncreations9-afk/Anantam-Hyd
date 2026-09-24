@@ -1,6 +1,5 @@
 import PageHero from "@/components/PageHero";
 import SectionLabel from "@/components/SectionLabel";
-import PrimaryButton from "@/components/PrimaryButton";
 import FadeIn from "@/components/FadeIn";
 import FinalCTA from "@/components/FinalCTA";
 import ResortImage from "@/components/ResortImage";
@@ -82,14 +81,10 @@ export default function DiningPage() {
               </FadeIn>
               <FadeIn delay={100}>
                 <SectionLabel>{section.label}</SectionLabel>
-                <h2 className="editorial-heading text-4xl sm:text-5xl">
-                  {section.title.map((line) => (
-                    <span key={line} className="block">
-                      {line}
-                    </span>
-                  ))}
+                <h2 className="editorial-heading text-balance">
+                  {section.title.join(" ")}
                 </h2>
-                <p className="mt-6 max-w-md text-base leading-relaxed text-muted">
+                <p className="mt-6 max-w-xl text-base leading-relaxed text-muted">
                   {section.text}
                 </p>
               </FadeIn>
@@ -97,20 +92,6 @@ export default function DiningPage() {
           </section>
         );
       })}
-
-      <section className="section-pad bg-forest-deep py-20 text-center lg:py-24">
-        <FadeIn>
-          <h2 className="editorial-heading text-3xl text-gold sm:text-4xl">
-            Ready to reserve a table
-            <span className="block">or plan a gathering?</span>
-          </h2>
-          <div className="mt-8 flex justify-center">
-            <PrimaryButton href="/contact#enquiry" variant="solidLight">
-              Enquire About Dining
-            </PrimaryButton>
-          </div>
-        </FadeIn>
-      </section>
 
       <FinalCTA />
     </>

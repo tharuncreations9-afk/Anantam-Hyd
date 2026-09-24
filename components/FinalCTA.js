@@ -18,9 +18,8 @@ export default function FinalCTA() {
 
       <div className="relative z-10 flex h-full min-h-0 items-center justify-center section-pad py-12 text-center sm:min-h-[55vh] sm:py-20">
         <FadeIn>
-          <h2 className="editorial-heading text-[1.85rem] leading-[1.1] text-gold sm:text-4xl md:text-5xl">
-            <span className="block">Your escape</span>
-            <span className="block">begins here.</span>
+          <h2 className="editorial-heading text-balance">
+            Your escape begins here.
           </h2>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-5 sm:gap-8">
             <PrimaryButton href="/contact#enquiry" variant="solidLight">

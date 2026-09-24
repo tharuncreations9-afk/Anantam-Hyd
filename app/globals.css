@@ -109,7 +109,7 @@
   }
 
   .editorial-heading {
-    @apply font-serif font-light leading-[1.05] tracking-[0.04em] text-gold;
+    @apply font-serif text-4xl font-light leading-[1.15] tracking-[0.04em] text-gold sm:text-5xl;
   }
 
   .link-underline {
@@ -139,11 +139,11 @@
   }
 
   .section-pad {
-    @apply px-5 sm:px-8 lg:px-12 xl:px-16;
+    @apply px-4 sm:px-6 lg:px-8 xl:px-10;
   }
 
   .container-luxury {
-    @apply mx-auto w-full max-w-[1400px];
+    @apply mx-auto w-full max-w-[1680px];
   }
 
   .gallery-scroll {

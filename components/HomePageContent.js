@@ -65,16 +65,15 @@ export default function HomePageContent() {
           </FadeIn>
           <FadeIn delay={100}>
             <SectionLabel>Our Story</SectionLabel>
-            <h2 className="editorial-heading text-4xl sm:text-5xl lg:text-6xl">
-              The Anantam
-              <span className="block">philosophy.</span>
+            <h2 className="editorial-heading text-balance">
+              The Anantam philosophy.
             </h2>
-            <p className="mt-8 max-w-md text-base leading-relaxed text-muted sm:text-lg">
+            <p className="mt-8 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
               Nestled in Shamshabad, Anantam is a quiet landscape for unhurried
               stays, considered dining and celebrations framed by lawns, water
               and open sky.
             </p>
-            <p className="mt-5 max-w-md text-base leading-relaxed text-muted sm:text-lg">
+            <p className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
               Close enough to the city. Far enough to feel away. Every space is
               shaped around presence — soft light, generous grounds and
               hospitality that does not rush the moment.
@@ -88,7 +87,7 @@ export default function HomePageContent() {
         <div className="container-luxury">
           <FadeIn className="mb-14 text-center">
             <SectionLabel className="text-center">Featured</SectionLabel>
-            <h2 className="editorial-heading text-4xl sm:text-5xl">
+            <h2 className="editorial-heading">
               Signature experiences
             </h2>
             <p className="mt-4 text-sm text-muted sm:text-base">
@@ -131,7 +130,7 @@ export default function HomePageContent() {
         <div className="container-luxury">
           <FadeIn className="mx-auto mb-14 max-w-4xl text-center">
             <SectionLabel className="text-center">Our House</SectionLabel>
-            <h2 className="editorial-heading whitespace-nowrap text-[clamp(1.35rem,4.2vw,3.25rem)]">
+            <h2 className="editorial-heading text-balance">
               Luxury spaces. Lawns. Stays.
             </h2>
             <p className="mt-5 text-sm leading-relaxed text-muted sm:text-base">
@@ -175,7 +174,7 @@ export default function HomePageContent() {
         <div className="section-pad container-luxury mb-10 text-center">
           <FadeIn>
             <SectionLabel className="text-center">Browse</SectionLabel>
-            <h2 className="editorial-heading text-4xl sm:text-5xl">
+            <h2 className="editorial-heading">
               Frames of Anantam
             </h2>
             <p className="mt-4 text-sm text-muted">

@@ -38,10 +38,14 @@ export const images = {
   "banquet": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/4f262b53-d51a-4c1c-8184-4c82b4da6bb7/AMC08841.webp?last=1789642583",
   "banquetHallSlides": [
     "/banquet/hall-1.webp",
-    "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/4f262b53-d51a-4c1c-8184-4c82b4da6bb7/AMC08841.webp?last=1789642583",
     "/banquet/hall-2.webp",
     "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/982a6b38-20a4-48be-84e6-49d3f436f77f/AMC08843.webp?last=1789642588",
     "/banquet/hall-3.webp"
+  ],
+  "banquetHall2Slides": [
+    "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/55059a78-f6a1-4edb-b426-002376f5131e/AMC08865.webp?last=1789642627",
+    "/banquet/hall2-2.webp",
+    "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/c26b0abc-60ab-4786-9e5c-37540ae70c80/AMC08867.webp?last=1789642630"
   ],
   "lobbySlides": [
     "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/b076b72b-07d4-4af8-ba4d-b9aabc1a4546/AMC08837.webp?last=1789642574",

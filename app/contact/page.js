@@ -40,9 +40,8 @@ export default function ContactPage() {
         <div className="container-luxury grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           <FadeIn>
             <SectionLabel>Reach Us</SectionLabel>
-            <h2 className="editorial-heading text-3xl sm:text-4xl">
-              Begin with
-              <span className="block">a conversation.</span>
+            <h2 className="editorial-heading text-balance">
+              Begin with a conversation.
             </h2>
 
             <div className="mt-10 overflow-hidden border border-forest-deep/10 bg-cream">
