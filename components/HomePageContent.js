@@ -40,8 +40,8 @@ const scrollGallery = [
   galleryItems[80],
   galleryItems[98],
   galleryItems[120],
-  galleryItems[145],
-  galleryItems[170],
+  galleryItems[140],
+  galleryItems[158],
 ].filter(Boolean);
 
 export default function HomePageContent() {

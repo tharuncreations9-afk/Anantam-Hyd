@@ -271,36 +271,6 @@ export const galleryItems = [
     "height": 4672
   },
   {
-    "id": "g506393556",
-    "title": "Quiet Interiors",
-    "category": "stays",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/541f6d48-c8bf-43dc-88a4-bc5dbd404fbb/AMC08625.webp?last=1789642155",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/541f6d48-c8bf-43dc-88a4-bc5dbd404fbb/AMC08625.webp?last=1789642155",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
-    "id": "g506393590",
-    "title": "Private Living",
-    "category": "stays",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/92c74bd2-fffd-4344-8a38-98aff09f5d68/AMC08627.webp?last=1789642159",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/92c74bd2-fffd-4344-8a38-98aff09f5d68/AMC08627.webp?last=1789642159",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
-    "id": "g506393696",
-    "title": "Suite Details",
-    "category": "stays",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/aaec23c1-12c9-4a0e-b739-0ceeec3d3939/AMC08629.webp?last=1789642171",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/aaec23c1-12c9-4a0e-b739-0ceeec3d3939/AMC08629.webp?last=1789642171",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
     "id": "g506393718",
     "title": "Room Sanctuary",
     "category": "stays",
@@ -326,26 +296,6 @@ export const galleryItems = [
     "category": "stays",
     "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/02611736-5263-4d41-bab0-8d70ba5a3aa6/AMC08635.webp?last=1789642173",
     "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/02611736-5263-4d41-bab0-8d70ba5a3aa6/AMC08635.webp?last=1789642173",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
-    "id": "g506393727",
-    "title": "Private Living",
-    "category": "stays",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/b144068a-6379-46f5-8c13-c4fd563e9d2b/AMC08637.webp?last=1789642173",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/b144068a-6379-46f5-8c13-c4fd563e9d2b/AMC08637.webp?last=1789642173",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
-    "id": "g506393807",
-    "title": "Suite Details",
-    "category": "stays",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/135d8b24-2344-402b-bf23-8ed4ff95aa23/AMC08640.webp?last=1789642180",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/135d8b24-2344-402b-bf23-8ed4ff95aa23/AMC08640.webp?last=1789642180",
     "aspect": "tall",
     "width": 4672,
     "height": 7008
@@ -421,16 +371,6 @@ export const galleryItems = [
     "height": 7008
   },
   {
-    "id": "g506394093",
-    "title": "Room Sanctuary",
-    "category": "stays",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/1da58ea3-6468-4982-bf90-24a55f0059b6/AMC08658.webp?last=1789642215",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/1da58ea3-6468-4982-bf90-24a55f0059b6/AMC08658.webp?last=1789642215",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
     "id": "g506394095",
     "title": "Guest Suite",
     "category": "stays",
@@ -439,66 +379,6 @@ export const galleryItems = [
     "aspect": "tall",
     "width": 4672,
     "height": 7008
-  },
-  {
-    "id": "g506394144",
-    "title": "Quiet Interiors",
-    "category": "stays",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/92faf053-a5b1-4d51-9a18-f55032ab64bf/AMC08663.webp?last=1789642223",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/92faf053-a5b1-4d51-9a18-f55032ab64bf/AMC08663.webp?last=1789642223",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
-    "id": "g506394257",
-    "title": "Garden Path",
-    "category": "nature",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/dafe7438-1b35-4500-b0f8-f1b08e3e9603/AMC08665.webp?last=1789642238",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/dafe7438-1b35-4500-b0f8-f1b08e3e9603/AMC08665.webp?last=1789642238",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
-    "id": "g506394248",
-    "title": "Tropical Greens",
-    "category": "nature",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/c5b86438-639e-441e-9ee6-3785103779fc/AMC08668.webp?last=1789642237",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/c5b86438-639e-441e-9ee6-3785103779fc/AMC08668.webp?last=1789642237",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
-    "id": "g506394261",
-    "title": "Landscaped Lawns",
-    "category": "nature",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/d4b42637-9a09-43b3-ad74-63f9877004e2/AMC08670.webp?last=1789642238",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/d4b42637-9a09-43b3-ad74-63f9877004e2/AMC08670.webp?last=1789642238",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
-    "id": "g506394273",
-    "title": "Garden Walk",
-    "category": "nature",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/8ce9d50a-8703-4947-9e46-7e6de7dc3d97/AMC08672.webp?last=1789642240",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/8ce9d50a-8703-4947-9e46-7e6de7dc3d97/AMC08672.webp?last=1789642240",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
-    "id": "g506394451",
-    "title": "Lush Grounds",
-    "category": "nature",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/9745f3a1-ada1-4e1d-b871-ffe97774472c/AMC08674.webp?last=1789642267",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/9745f3a1-ada1-4e1d-b871-ffe97774472c/AMC08674.webp?last=1789642267",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
   },
   {
     "id": "g506394353",
@@ -519,36 +399,6 @@ export const galleryItems = [
     "aspect": "wide",
     "width": 7008,
     "height": 4672
-  },
-  {
-    "id": "g506394409",
-    "title": "Landscaped Lawns",
-    "category": "nature",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/29bf78d0-8ae9-4b76-86ed-c1a557517798/AMC08681.webp?last=1789642259",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/29bf78d0-8ae9-4b76-86ed-c1a557517798/AMC08681.webp?last=1789642259",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
-    "id": "g506394408",
-    "title": "Garden Walk",
-    "category": "nature",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/fa4ee6b9-38d1-49ba-a899-25f74ab733a1/AMC08683.webp?last=1789642259",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/fa4ee6b9-38d1-49ba-a899-25f74ab733a1/AMC08683.webp?last=1789642259",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
-    "id": "g506394420",
-    "title": "Lush Grounds",
-    "category": "nature",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/c0b190eb-2360-42f2-a903-67776e0a563d/AMC08685.webp?last=1789642260",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/c0b190eb-2360-42f2-a903-67776e0a563d/AMC08685.webp?last=1789642260",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
   },
   {
     "id": "g506394453",
@@ -579,16 +429,6 @@ export const galleryItems = [
     "aspect": "wide",
     "width": 7008,
     "height": 4672
-  },
-  {
-    "id": "g506394547",
-    "title": "Garden Walk",
-    "category": "nature",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/bba3c8bf-1e39-4dd8-8261-bdba84fc4dbe/AMC08693.webp?last=1789642278",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/bba3c8bf-1e39-4dd8-8261-bdba84fc4dbe/AMC08693.webp?last=1789642278",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
   },
   {
     "id": "g506394595",
@@ -681,16 +521,6 @@ export const galleryItems = [
     "height": 4672
   },
   {
-    "id": "g506394916",
-    "title": "Garden Walk",
-    "category": "nature",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/75b0bf3d-3ef3-4d8d-b6ae-1be6fc9c8674/AMC08714.webp?last=1789642327",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/75b0bf3d-3ef3-4d8d-b6ae-1be6fc9c8674/AMC08714.webp?last=1789642327",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
     "id": "g506394959",
     "title": "Lush Grounds",
     "category": "nature",
@@ -771,16 +601,6 @@ export const galleryItems = [
     "height": 4672
   },
   {
-    "id": "g506395288",
-    "title": "Day by the Pool",
-    "category": "pool",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/51fae9c3-dac7-4175-85b0-8380a65b01d4/AMC08733.webp?last=1789642372",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/51fae9c3-dac7-4175-85b0-8380a65b01d4/AMC08733.webp?last=1789642372",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
     "id": "g506395320",
     "title": "Water Edge",
     "category": "pool",
@@ -809,16 +629,6 @@ export const galleryItems = [
     "aspect": "wide",
     "width": 7008,
     "height": 4672
-  },
-  {
-    "id": "g506395421",
-    "title": "Poolside Lounge",
-    "category": "pool",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/56833a0a-7f6a-460b-a620-23c149a716f6/AMC08742.webp?last=1789642387",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/56833a0a-7f6a-460b-a620-23c149a716f6/AMC08742.webp?last=1789642387",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
   },
   {
     "id": "g506395496",
@@ -879,16 +689,6 @@ export const galleryItems = [
     "aspect": "wide",
     "width": 7008,
     "height": 4672
-  },
-  {
-    "id": "g506395641",
-    "title": "Water Edge",
-    "category": "pool",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/dead5a07-bd1d-4782-8af8-dc1fd300ecaf/AMC08756.webp?last=1789642413",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/dead5a07-bd1d-4782-8af8-dc1fd300ecaf/AMC08756.webp?last=1789642413",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
   },
   {
     "id": "g506395683",
@@ -1341,16 +1141,6 @@ export const galleryItems = [
     "height": 4672
   },
   {
-    "id": "g506397475",
-    "title": "Ceremony Setting",
-    "category": "weddings",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/b5ef27ba-15ba-42e4-90fd-0d5c87d0bf3b/AMC08853.webp?last=1789642607",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/b5ef27ba-15ba-42e4-90fd-0d5c87d0bf3b/AMC08853.webp?last=1789642607",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
     "id": "g506397501",
     "title": "Wedding Greens",
     "category": "weddings",
@@ -1369,16 +1159,6 @@ export const galleryItems = [
     "aspect": "wide",
     "width": 7008,
     "height": 4672
-  },
-  {
-    "id": "g506397558",
-    "title": "Gathering Space",
-    "category": "weddings",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/000a617a-48d6-4d20-8c43-e46438363c41/AMC08862.webp?last=1789642617",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/000a617a-48d6-4d20-8c43-e46438363c41/AMC08862.webp?last=1789642617",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
   },
   {
     "id": "g506397608",
@@ -1469,16 +1249,6 @@ export const galleryItems = [
     "aspect": "tall",
     "width": 4672,
     "height": 7008
-  },
-  {
-    "id": "g506397883",
-    "title": "Gathering Space",
-    "category": "weddings",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/2f98c22c-1986-42e5-81fd-1288fccea6cf/AMC08883.webp?last=1789642678",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/2f98c22c-1986-42e5-81fd-1288fccea6cf/AMC08883.webp?last=1789642678",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
   },
   {
     "id": "g506397819",
@@ -1611,31 +1381,11 @@ export const galleryItems = [
     "height": 7008
   },
   {
-    "id": "g506398092",
-    "title": "Culinary Space",
-    "category": "dining",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/d339b814-a6dc-4517-a937-d758eefce71d/AMC08914.webp?last=1789642710",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/d339b814-a6dc-4517-a937-d758eefce71d/AMC08914.webp?last=1789642710",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
     "id": "g506398159",
     "title": "Dining Atmosphere",
     "category": "dining",
     "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/5b52cb84-7905-4a4e-b031-70e00d2f3577/AMC08916.webp?last=1789642722",
     "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/5b52cb84-7905-4a4e-b031-70e00d2f3577/AMC08916.webp?last=1789642722",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
-    "id": "g506398166",
-    "title": "Dining Pavilion",
-    "category": "dining",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/cee7c637-a7ab-4970-ae75-09a34de404c5/AMC08918.webp?last=1789642723",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/cee7c637-a7ab-4970-ae75-09a34de404c5/AMC08918.webp?last=1789642723",
     "aspect": "wide",
     "width": 7008,
     "height": 4672
@@ -1656,16 +1406,6 @@ export const galleryItems = [
     "category": "dining",
     "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/e938c7f3-0674-46ae-b5ef-ece23e8e90ac/AMC08923.webp?last=1789642729",
     "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/e938c7f3-0674-46ae-b5ef-ece23e8e90ac/AMC08923.webp?last=1789642729",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
-    "id": "g506398332",
-    "title": "Culinary Space",
-    "category": "dining",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/08e21647-bc75-4c0a-9632-73ca0aed3dc9/AMC08925.webp?last=1789642744",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/08e21647-bc75-4c0a-9632-73ca0aed3dc9/AMC08925.webp?last=1789642744",
     "aspect": "wide",
     "width": 7008,
     "height": 4672
@@ -1781,41 +1521,11 @@ export const galleryItems = [
     "height": 4672
   },
   {
-    "id": "g506398774",
-    "title": "Resort Arrival",
-    "category": "resort",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/d0ba8feb-c562-4d4a-98ec-e7c261eb5285/AMC08951.webp?last=1789642789",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/d0ba8feb-c562-4d4a-98ec-e7c261eb5285/AMC08951.webp?last=1789642789",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
-    "id": "g506398824",
-    "title": "Architecture",
-    "category": "resort",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/6a9e1eb9-31bb-422a-892d-65144b4c1de6/AMC08953.webp?last=1789642794",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/6a9e1eb9-31bb-422a-892d-65144b4c1de6/AMC08953.webp?last=1789642794",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
     "id": "g506398814",
     "title": "Courtyard",
     "category": "resort",
     "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/dc949edb-aeb8-43fd-8a2d-c98592b17ae0/AMC08956.webp?last=1789642794",
     "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/dc949edb-aeb8-43fd-8a2d-c98592b17ae0/AMC08956.webp?last=1789642794",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
-    "id": "g506398816",
-    "title": "Pavilion",
-    "category": "resort",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/9b774d9d-5395-4feb-a8fa-f7694bbdbfe9/AMC08958.webp?last=1789642794",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/9b774d9d-5395-4feb-a8fa-f7694bbdbfe9/AMC08958.webp?last=1789642794",
     "aspect": "wide",
     "width": 7008,
     "height": 4672
@@ -1861,16 +1571,6 @@ export const galleryItems = [
     "height": 7008
   },
   {
-    "id": "g506399060",
-    "title": "Room Sanctuary",
-    "category": "stays",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/7a20b37a-6a79-4c88-8aae-b3258f4505f7/AMC08970.webp?last=1789642820",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/7a20b37a-6a79-4c88-8aae-b3258f4505f7/AMC08970.webp?last=1789642820",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
     "id": "g506399068",
     "title": "Resort Arrival",
     "category": "resort",
@@ -1901,56 +1601,6 @@ export const galleryItems = [
     "height": 7008
   },
   {
-    "id": "g506399234",
-    "title": "Courtyard",
-    "category": "resort",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/cdcaebaf-8300-4f61-92a0-3fb9fec7e0c2/AMC08978.webp?last=1789642841",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/cdcaebaf-8300-4f61-92a0-3fb9fec7e0c2/AMC08978.webp?last=1789642841",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
-    "id": "g506399288",
-    "title": "Quiet Interiors",
-    "category": "stays",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/b3bb9f0e-9e4f-4771-8143-38d3594c97c5/AMC08982.webp?last=1789642848",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/b3bb9f0e-9e4f-4771-8143-38d3594c97c5/AMC08982.webp?last=1789642848",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
-    "id": "g506399242",
-    "title": "Pavilion",
-    "category": "resort",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/6a8f9271-d1cb-4039-b3b8-edff8653199e/AMC08984.webp?last=1789642842",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/6a8f9271-d1cb-4039-b3b8-edff8653199e/AMC08984.webp?last=1789642842",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
-    "id": "g506399305",
-    "title": "Entrance",
-    "category": "resort",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/a0c94e7f-b698-4d0a-b161-7e4a8faed8fc/AMC08986.webp?last=1789642849",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/a0c94e7f-b698-4d0a-b161-7e4a8faed8fc/AMC08986.webp?last=1789642849",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
-    "id": "g506399381",
-    "title": "Private Living",
-    "category": "stays",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/c10b7cd7-a51d-4d48-8a5e-d38292f04b98/AMC08988.webp?last=1789642859",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/c10b7cd7-a51d-4d48-8a5e-d38292f04b98/AMC08988.webp?last=1789642859",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
     "id": "g506399393",
     "title": "Resort Grounds",
     "category": "resort",
@@ -1961,26 +1611,6 @@ export const galleryItems = [
     "height": 4672
   },
   {
-    "id": "g506399405",
-    "title": "Resort Arrival",
-    "category": "resort",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/0ee480a4-325e-443d-b313-a5af569ddbda/AMC08992.webp?last=1789642862",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/0ee480a4-325e-443d-b313-a5af569ddbda/AMC08992.webp?last=1789642862",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
-    "id": "g506399428",
-    "title": "Suite Details",
-    "category": "stays",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/ff013bbf-3932-493c-8344-f906d4f19c54/AMC08994.webp?last=1789642867",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/ff013bbf-3932-493c-8344-f906d4f19c54/AMC08994.webp?last=1789642867",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
     "id": "g506399435",
     "title": "Architecture",
     "category": "resort",
@@ -1989,75 +1619,5 @@ export const galleryItems = [
     "aspect": "wide",
     "width": 7008,
     "height": 4672
-  },
-  {
-    "id": "g506399485",
-    "title": "Courtyard",
-    "category": "resort",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/5c27ab29-f2eb-4101-afb7-991e01b26c51/AMC08998.webp?last=1789642874",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/5c27ab29-f2eb-4101-afb7-991e01b26c51/AMC08998.webp?last=1789642874",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
-    "id": "g506399541",
-    "title": "Room Sanctuary",
-    "category": "stays",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/9cc96cda-2c6f-478f-9aac-dcdb1d6e38c7/AMC09001.webp?last=1789642881",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/9cc96cda-2c6f-478f-9aac-dcdb1d6e38c7/AMC09001.webp?last=1789642881",
-    "aspect": "tall",
-    "width": 4672,
-    "height": 7008
-  },
-  {
-    "id": "g506399548",
-    "title": "Pavilion",
-    "category": "resort",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/af248467-4260-4f29-b728-dc72c14ca549/AMC09003.webp?last=1789642882",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/af248467-4260-4f29-b728-dc72c14ca549/AMC09003.webp?last=1789642882",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
-    "id": "g506399618",
-    "title": "Entrance",
-    "category": "resort",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/83276d40-1a20-4d27-be9f-9f9b2794e0bf/AMC09006.webp?last=1789642891",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/83276d40-1a20-4d27-be9f-9f9b2794e0bf/AMC09006.webp?last=1789642891",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
-    "id": "g506399583",
-    "title": "Resort Grounds",
-    "category": "resort",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/41b73643-2910-41d9-9782-01eb3e9c3317/AMC09008.webp?last=1789642885",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/41b73643-2910-41d9-9782-01eb3e9c3317/AMC09008.webp?last=1789642885",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
-  },
-  {
-    "id": "g506399635",
-    "title": "Resort Arrival",
-    "category": "resort",
-    "image": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/4293a05d-a29e-4b02-b8c7-38edb71ede83/AMC09010.webp?last=1789642894",
-    "thumb": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/med/v2/4293a05d-a29e-4b02-b8c7-38edb71ede83/AMC09010.webp?last=1789642894",
-    "aspect": "wide",
-    "width": 7008,
-    "height": 4672
   }
-];
-
-export const galleryCategories = [
-  { id: "all", label: "All" },
-  { id: "resort", label: "Resort" },
-  { id: "stays", label: "Stays" },
-  { id: "dining", label: "Dining" },
-  { id: "pool", label: "Pool" },
-  { id: "weddings", label: "Weddings" },
-  { id: "nature", label: "Nature" },
 ];

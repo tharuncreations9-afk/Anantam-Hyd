@@ -5,7 +5,7 @@
  * Full set lives in data/gallery.js
  */
 export const images = {
-  "hero": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/3635810d-01ff-4eca-93e0-7ca105bc155d/AMC08565.webp?last=1789642070",
+  "hero": "/hero-fountain.png",
   "intro": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/0fa8b7fc-c476-41a0-843b-cb00eb943925/AMC08591.webp?last=1789642092",
   "stay": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/8cc8244a-41ce-4cd0-a00e-21f57fc28ed3/AMC08910.webp?last=1789642738",
   "dine": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/bcf4723c-f1f9-4431-91c5-e010d28ee1dc/AMC08917.webp?last=1789642722",
