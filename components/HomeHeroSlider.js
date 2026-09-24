@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
+import useSwipe from "@/components/useSwipe";
 
 const SLIDE_MS = 6500;
 
@@ -42,29 +43,46 @@ export default function HomeHeroSlider() {
     setIndex(((next % slides.length) + slides.length) % slides.length);
   }, []);
 
+  const goNext = useCallback(() => {
+    setIndex((current) => (current + 1) % slides.length);
+  }, []);
+
+  const goPrev = useCallback(() => {
+    setIndex((current) => (current - 1 + slides.length) % slides.length);
+  }, []);
+
+  const swipe = useSwipe({ onNext: goNext, onPrev: goPrev });
+
   useEffect(() => {
     if (paused) return undefined;
-    const timer = window.setInterval(() => {
-      setIndex((current) => (current + 1) % slides.length);
-    }, SLIDE_MS);
+    const timer = window.setInterval(goNext, SLIDE_MS);
     return () => window.clearInterval(timer);
-  }, [paused]);
+  }, [paused, goNext]);
 
   const active = slides[index];
 
   return (
     <section
-      className="relative flex min-h-[100svh] items-end overflow-hidden"
+      className="relative flex aspect-[3/2] touch-pan-y items-end overflow-hidden bg-forest-deep select-none sm:aspect-auto sm:min-h-[100svh]"
       aria-roledescription="carousel"
       aria-label="Anantam resort highlights"
+      style={{ touchAction: "pan-y" }}
       onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
+      onMouseLeave={() => {
+        setPaused(false);
+        swipe.onMouseLeave();
+      }}
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget)) {
           setPaused(false);
         }
       }}
+      onTouchStart={swipe.onTouchStart}
+      onTouchEnd={swipe.onTouchEnd}
+      onTouchCancel={swipe.onTouchCancel}
+      onMouseDown={swipe.onMouseDown}
+      onMouseUp={swipe.onMouseUp}
     >
       {slides.map((slide, i) => (
         <div
@@ -81,19 +99,20 @@ export default function HomeHeroSlider() {
             priority={i === 0}
             quality={90}
             sizes="100vw"
-            className="object-cover object-center"
+            draggable={false}
+            className="pointer-events-none object-contain object-center sm:object-cover sm:object-center"
           />
         </div>
       ))}
 
-      <div className="absolute inset-0 bg-gradient-to-t from-forest-deep/60 via-forest-deep/20 to-forest-deep/30" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest-deep/70 via-forest-deep/20 to-forest-deep/15 sm:from-forest-deep/60 sm:via-forest-deep/20 sm:to-forest-deep/30" />
 
-      <div className="relative z-10 container-luxury section-pad w-full pb-28 pt-32 sm:pb-32 lg:pb-36">
+      <div className="pointer-events-none relative z-10 container-luxury section-pad w-full pb-16 pt-20 sm:pb-32 sm:pt-32 lg:pb-36">
         <div key={active.id} className="max-w-4xl">
-          <p className="label-caps animate-[fade-up_0.7s_ease_both] text-ivory/70">
+          <p className="label-caps animate-[fade-up_0.7s_ease_both] text-[0.58rem] text-ivory/70 sm:text-[0.68rem]">
             {active.eyebrow}
           </p>
-          <h1 className="editorial-heading mt-5 animate-[fade-up_0.8s_ease_0.08s_both] text-5xl text-gold sm:text-6xl lg:text-7xl">
+          <h1 className="editorial-heading mt-3 animate-[fade-up_0.8s_ease_0.08s_both] text-[1.85rem] leading-[1.1] text-gold sm:mt-5 sm:text-5xl md:text-6xl lg:text-7xl">
             {active.lines.map((line) => (
               <span key={line} className="block">
                 {line}
@@ -101,14 +120,14 @@ export default function HomeHeroSlider() {
             ))}
           </h1>
           {active.support ? (
-            <p className="mt-6 max-w-lg animate-[fade-up_0.8s_ease_0.16s_both] text-base leading-relaxed text-ivory/75 sm:text-lg">
+            <p className="mt-3 max-w-lg animate-[fade-up_0.8s_ease_0.16s_both] text-xs leading-relaxed text-ivory/75 sm:mt-6 sm:text-base lg:text-lg">
               {active.support}
             </p>
           ) : null}
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-5">
+      <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-3 sm:bottom-8 sm:gap-5">
         <div
           className="flex items-center gap-2.5"
           role="tablist"
@@ -130,7 +149,7 @@ export default function HomeHeroSlider() {
             />
           ))}
         </div>
-        <div className="scroll-indicator flex flex-col items-center gap-2 text-ivory/70">
+        <div className="scroll-indicator pointer-events-none flex flex-col items-center gap-2 text-ivory/70">
           <span className="label-caps text-[0.58rem]">Scroll</span>
           <span className="h-8 w-px bg-ivory/50" aria-hidden="true" />
         </div>
