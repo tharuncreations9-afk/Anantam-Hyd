@@ -22,7 +22,7 @@ export const images = {
   ],
   "room": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/59d0335f-3514-4ce9-8c27-b5dc4997102c/AMC08620.webp?last=1789642149",
   "dining": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/0420c71a-de59-476e-8293-a9daff9397a6/AMC08920.webp?last=1789642722",
-  "diningDetail": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/08e21647-bc75-4c0a-9632-73ca0aed3dc9/AMC08925.webp?last=1789642744",
+  "diningDetail": "/dining/AMC08932.webp",
   "privateDining": "/private-dining.png",
   "wedding": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/9d7f66e6-1979-43c0-8ae0-de5b747ea737/AMC08795.webp?last=1789642491",
   "weddingLawn": "https://storage.fotoowl.ai/events/361477/LvyLXdFazKTM62dC2bETKc0BUA83/high/v2/822041f4-c13a-450a-ab75-71f57b37af30/AMC08602.webp?last=1789642923",
